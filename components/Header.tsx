@@ -1,88 +1,74 @@
+import { useState, MouseEvent } from "react";
 
 const Header: React.FunctionComponent<{}> = (): React.ReactElement => {
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
+
+  const handleClick = (event: MouseEvent<HTMLDivElement>) => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
-    <div className="header header-fixed u-unselectable header-animated">
+    <div className="header header-fixed header-dark u-unselectable header-animated bg-blue-700">
       <div className="header-brand">
-        <div className="nav-item no-hover">
+        <div className="nav-item no-hover m-1">
           <a>
-            <h6 className="title">Logo</h6>
+            <h6 className="title">mark.the.dev</h6>
           </a>
         </div>
-        <div className="nav-item nav-btn" id="header-btn">
+        <div className="nav-item nav-btn" onClick={handleClick}>
           <span></span>
           <span></span>
           <span></span>
         </div>
       </div>
-      <div className="header-nav" id="header-menu">
+      <div
+        className={`header-nav ${menuOpen ? "active" : ""}`}
+        id="header-menu"
+      >
         <div className="nav-left">
           <div className="nav-item text-center">
-            <a href="#">
+            <a href="https://github.com/shoshin-programmer" target="_blank">
               <span className="icon">
                 <i className="fab fa-wrapper fa-github" aria-hidden="true"></i>
               </span>
             </a>
           </div>
           <div className="nav-item text-center">
-            <a href="#">
+            <a
+              href="https://www.linkedin.com/in/arvin-mark-atienza-687851143/"
+              target="_blank"
+            >
               <span className="icon">
-                <i className="fab fa-wrapper fa-slack" aria-hidden="true"></i>
+                <i
+                  className="fab fa-wrapper fa-linkedin"
+                  aria-hidden="true"
+                ></i>
               </span>
             </a>
-          </div>
-          <div className="nav-item text-center">
-            <a href="#">
-              <span className="icon">
-                <i className="fab fa-wrapper fa-twitter" aria-hidden="true"></i>
-              </span>
-            </a>
-          </div>
-          <div className="nav-item has-sub toggle-hover" id="dropdown">
-            <a className="nav-dropdown-link">Animated</a>
-            <ul className="dropdown-menu dropdown-animated" role="menu">
-              <li role="menu-item">
-                <a href="#">First Item</a>
-              </li>
-              <li role="menu-item">
-                <a href="#">Second Item</a>
-              </li>
-              <li role="menu-item">
-                <a href="#">Third Item</a>
-              </li>
-            </ul>
           </div>
         </div>
 
         <div className="nav-right">
-          <div className="nav-item active">
-            <a href="#">Active</a>
+          <div className="nav-item">
+            <a href="/">Home</a>
           </div>
           <div className="nav-item">
-            <a href="#">Link 1</a>
+            <a href="/projects" target="_blank">
+              Projects
+            </a>
           </div>
-          <div className="nav-item has-sub" id="dropdown">
-            <a className="nav-dropdown-link">Click Me</a>
-            <ul className="dropdown-menu" role="menu">
-              <li role="menu-item">
-                <a href="#">First Item</a>
-              </li>
-              <li role="menu-item">
-                <a href="#">Second Item</a>
-              </li>
-              <li role="menu-item">
-                <a href="#">Third Item</a>
-              </li>
-              <li className="dropdown-menu-divider"></li>
-              <li role="menu-item">
-                <a href="#">Fourth Item</a>
-              </li>
-            </ul>
+          <div className="nav-item">
+            <a href="/blog" target="_blank">
+              Blog
+            </a>
+          </div>
+          <div className="nav-item">
+            <button className="btn btn-black btn-small">RESUME</button>
           </div>
         </div>
       </div>
     </div>
   );
 };
-
 
 export default Header;
