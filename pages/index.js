@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Header from "../components/Header.tsx";
 import Landing from "../sections/Landing.tsx";
+import FeaturedSection from "../sections/FeaturedSection.tsx";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       </Head>
       <Header />
       <Landing />
+      <FeaturedSection />
     </div>
   );
 }

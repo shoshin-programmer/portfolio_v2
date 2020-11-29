@@ -5,12 +5,14 @@ body {
   scroll-behavior: smooth;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background: #101010; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #707070, #101010);
-  background: linear-gradient(to bottom, #707070, #101010) no-repeat fixed;
+  background: #101010;
+  /* fallback for old browsers */
+  /* background: -webkit-linear-gradient(to bottom, #000, #101010); */
+  background: linear-gradient(to bottom, #04132e, #020916) no-repeat fixed;
 }
 #landing-img {
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://source.unsplash.com/suLgJZ1edT4/1920x1280');
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://source.unsplash.com/suLgJZ1edT4/1920x1280");
   background-size: cover;
   overflow: hidden;
 }
@@ -19,7 +21,7 @@ body {
   top: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
 }
 
 a {
@@ -29,4 +31,12 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.svg-inline--fa {
+  font-size: 1em !important;
+}
+
+.bg-black {
+  background: #000000 !important;
 }
