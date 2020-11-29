@@ -8,7 +8,7 @@ const Header: React.FunctionComponent<{}> = (): React.ReactElement => {
   };
 
   return (
-    <div className="header header-fixed header-dark u-unselectable header-animated bg-blue-700">
+    <div className="header header-dark header-fixed header-dark u-unselectable header-animated">
       <div className="header-brand">
         <div className="nav-item no-hover m-1">
           <a>
@@ -63,7 +63,7 @@ const Header: React.FunctionComponent<{}> = (): React.ReactElement => {
             </a>
           </div>
           <div className="nav-item">
-            <button className="btn btn-black btn-small">RESUME</button>
+            <button className="btn outline btn-light btn-small">RESUME</button>
           </div>
         </div>
       </div>
