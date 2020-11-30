@@ -23,6 +23,19 @@ body {
   background-size: cover;
   overflow: hidden;
 }
+#work-section {
+  background: rgba(252, 252, 252, 0.05);
+  background: linear-gradient(
+    rgba(252, 252, 252, 0.05),
+    rgba(252, 252, 252, 0.1)
+  );
+}
+#project-section {
+  background: linear-gradient(rgba(4, 19, 46, 0.9), rgba(0, 0, 0, 0.9)),
+    url(https://images.unsplash.com/photo-1502790671504-542ad42d5189?auto=format&fit=crop&w=1600&q=100);
+  background-size: cover;
+  background-position: center center;
+}
 #dark-overlay {
   position: absolute;
   top: 0;

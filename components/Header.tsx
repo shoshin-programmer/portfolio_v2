@@ -53,9 +53,13 @@ const Header: React.FunctionComponent<{}> = (): React.ReactElement => {
             <a href="/">Home</a>
           </div>
           <div className="nav-item">
-            <a href="/projects" target="_blank">
-              Projects
-            </a>
+            <a href="#about-section">About</a>
+          </div>
+          <div className="nav-item">
+            <a href="#project-section">Projects</a>
+          </div>
+          <div className="nav-item">
+            <a href="#work-section">Work</a>
           </div>
           <div className="nav-item">
             <a href="/blog" target="_blank">

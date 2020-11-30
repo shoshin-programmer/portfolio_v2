@@ -17,7 +17,7 @@ const AboutSection: React.FunctionComponent<{}> = (): React.ReactElement => {
           user-experience in mind. I also happen to have specialized experiences
           for creating internal applications for companies to provide better and
           efficient processes.
-          <div className="mb-5" />
+          <span className="mb-5" />
           Here are a few technologies I've been working with recently:
         </p>
         <div className="content">

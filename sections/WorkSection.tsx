@@ -1,40 +1,69 @@
 const WorkSection: React.FunctionComponent<{}> = (): React.ReactElement => {
   return (
-    <section className="py-8" id="about-section">
-      <div className="frame">
-          <ul className="menu">
-            <li className="divider"></li>
-            <li className="menu-item selected">
-              <div className="menu-addon right">
-                <span className="icon">
-                  <i
-                    className="fa fa-wrapper fa-ellipsis-h small"
-                    aria-hidden="true"
-                  ></i>
-                </span>
-              </div>
-              <a href="!#">News Feed</a>
-            </li>
-            <li className="menu-item">
-              <a href="!#">Messenger</a>
-            </li>
-          </ul>
+    <section className="footer mt-0" id="work-section">
+      <h2 className="uppercase p-2 text-gray-600 u-text-center">Work</h2>
+      <div className="content text-left">
+        <div className="row level">
+          <div className="col-6">
+            <h6 className="title text-left white">ZenRooms @ 2020</h6>
+            <p>
+              Working on internal system for Finance team automation of
+              processes.
+            </p>
 
-        <div className="frame__body">
-          <div className="frame__header">
-            <div className="tile level">
-              <div className="tile__icon">
-                <figure className="avatar">
-                  <img src="https://crunchbase-production-res.cloudinary.com/image/upload/c_thumb,h_256,w_256,f_auto,g_faces,z_0.7,q_auto:eco/v1398292826/a1tq244sp7uqhb5a0utg.png" />
-                </figure>
-              </div>
-              <div className="tile__container">
-                <p className="tile__title">Richard Hendricks.</p>
-                <p className="tile__subtitle">Founder and CEO of Pied Piper.</p>
-              </div>
+            <div className="row"></div>
+          </div>
+          <div className="col-6">
+            <div className="u-center">
+              <button className="btn-light outline font-bold">
+                Python Developer
+              </button>
             </div>
           </div>
         </div>
+        <div className="space large"></div>
+        <div className="row level">
+          <div className="col-6">
+            <h6 className="title text-left white">RingCentral @ 2019</h6>
+            <p>
+              Internal HR system using Python, Django, React. From designing to
+              deploying internal tool. Also worked with Microsoft PowerApps and
+              Sharepoint for specific purposes.
+            </p>
+
+            <div className="row"></div>
+          </div>
+          <div className="col-6">
+            <div className="u-center">
+              <button className="btn-light outline font-bold">
+                GSS PMO Analyst / Python Developer
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="space large"></div>
+
+        <div className="row level">
+          <div className="col-6">
+            <h6 className="title text-left white">SiP @ 2018</h6>
+            <p>
+              Data-mining, data-analysis, Facebook Marketing and automating
+              Internal Processes. Stack used is mostly Python with Pandas,
+              Matplotlib, Numpy, and Tkinter.
+            </p>
+
+            <div className="row"></div>
+          </div>
+          <div className="col-6">
+            <div className="u-center">
+              <button className="btn-light outline font-bold">
+                Data Specialist
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="space large"></div>
       </div>
     </section>
   );
