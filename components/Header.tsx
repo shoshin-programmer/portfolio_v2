@@ -7,6 +7,10 @@ const Header: React.FunctionComponent<{}> = (): React.ReactElement => {
     setMenuOpen(!menuOpen);
   };
 
+  const handleSoon = (event: MouseEvent<HTMLAnchorElement>) => {
+    alert("Coming Soon");
+  };
+
   return (
     <div className="header header-dark header-fixed header-dark u-unselectable header-animated">
       <div className="header-brand">
@@ -62,7 +66,7 @@ const Header: React.FunctionComponent<{}> = (): React.ReactElement => {
             <a href="#work-section">Work</a>
           </div>
           <div className="nav-item">
-            <a href="/blog" target="_blank">
+            <a onClick={handleSoon} target="_blank">
               Blog
             </a>
           </div>
