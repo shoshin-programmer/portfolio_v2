@@ -66,9 +66,9 @@ const Header: React.FunctionComponent<{}> = (): React.ReactElement => {
               Blog
             </a>
           </div>
-          <div className="nav-item">
+          {/* <div className="nav-item">
             <button className="btn outline btn-light btn-small">RESUME</button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
