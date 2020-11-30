@@ -1,12 +1,12 @@
 const featured = [
   {
-    title: "Project 1",
-    img: "https://placeimg.com/640/480/nature",
+    title: "Commissions Portfolio",
+    img: "/inks.png",
     intro:
-      "Nec invenire inciderint scriptorem et. Et viderer euismod alienum eos, no his melius ancillae.",
-    page__link: "#",
-    github__link: "#",
-    post__link: "#",
+      "Simple page for commissions portfolio made with NextJS and uploaded via Vercel.",
+    page__link: "http://inks-and-watercolor.vercel.app/",
+    github__link: "https://github.com/shoshin-programmer/inks_and_watercolors",
+    post__link: null,
   },
 ];
 

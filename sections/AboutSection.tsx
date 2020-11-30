@@ -1,8 +1,11 @@
 const AboutSection: React.FunctionComponent<{}> = (): React.ReactElement => {
   return (
     <section className="py-8" id="about-section">
-      <div className="content u-text-center text-gray-200">
-        <h3 className="uppercase font-bold mb-5">
+      <div className="content u-text-center text-gray-200 p-2">
+        <div className="avatar avatar--xlarge bg-gray-200">
+          <img src="/myAvatar.svg" alt="avatar" />
+        </div>
+        <h3 className="uppercase font-bold m-5">
           MY NAME IS
           <span className="text-primary"> Mark Atienza</span>
         </h3>
@@ -14,8 +17,7 @@ const AboutSection: React.FunctionComponent<{}> = (): React.ReactElement => {
           user-experience in mind. I also happen to have specialized experiences
           for creating internal applications for companies to provide better and
           efficient processes.
-          <br />
-          <br />
+          <div className="mb-5" />
           Here are a few technologies I've been working with recently:
         </p>
         <div className="content">

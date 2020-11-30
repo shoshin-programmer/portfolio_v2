@@ -11,7 +11,11 @@ body {
   background: linear-gradient(to bottom, #04132e, #020916) no-repeat fixed;
 }
 #about-section {
-  background: rgba(252, 252, 252, 0.1);
+  background: rgba(252, 252, 252, 0.05);
+  background: linear-gradient(
+    rgba(252, 252, 252, 0.05),
+    rgba(252, 252, 252, 0.1)
+  );
 }
 #landing-img {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -42,4 +46,9 @@ a {
 
 .bg-black {
   background: #000000 !important;
+}
+
+.project-img {
+  background-size: cover !important;
+  background-position: center !important;
 }

@@ -8,9 +8,9 @@ const Landing: React.FunctionComponent<{}> = (): React.ReactElement => {
             <div className="row">
               <div className="col-8">
                 <h5 className="text-gray-300 sub-title font-alt font-normal">
-                  I am <b className="white">fullstack web developer </b>
-                  that creates <b className="white">engaging </b>and
-                  <b className="white"> user-centric </b>
+                  I am <b className="text-primary">fullstack web developer </b>
+                  that creates <b className="text-primary">engaging </b>and
+                  <b className="text-primary"> user-centric </b>
                   web applications.
                 </h5>
               </div>

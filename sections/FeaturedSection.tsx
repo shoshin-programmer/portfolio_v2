@@ -14,11 +14,11 @@ const FeaturedSection: React.FunctionComponent<{}> = (): React.ReactElement => {
           <div className="row fluid-container">
             {featured.map((item, idx) => {
               return (
-                <div className="col-4" key={idx}>
+                <div className="col-12" key={idx}>
                   <div className="card bg-black">
                     <div className="card-container">
                       <div
-                        className="card-image project-image"
+                        className="card-image project-img"
                         style={{
                           background: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("${item.img}")`,
                         }}
@@ -32,11 +32,13 @@ const FeaturedSection: React.FunctionComponent<{}> = (): React.ReactElement => {
                       <p>{item.intro}</p>
                     </div>
                     <div className="u-text-center">
-                      <div className="btn-group btn-group">
-                        {item.page__link ? (
+                      <div className="btn-group btn-group p-2">
+                        {item.github__link ? (
                           <a
                             href={item.github__link}
                             className="btn btn-dark btn-xsmall"
+                            rel="noreferrer"
+                            target="_blank"
                           >
                             GITHUB
                           </a>
@@ -47,6 +49,8 @@ const FeaturedSection: React.FunctionComponent<{}> = (): React.ReactElement => {
                           <a
                             href={item.page__link}
                             className="btn btn-dark btn-xsmall"
+                            rel="noreferrer"
+                            target="_blank"
                           >
                             PAGE
                           </a>
@@ -54,10 +58,11 @@ const FeaturedSection: React.FunctionComponent<{}> = (): React.ReactElement => {
                           ""
                         )}
 
-                        {item.page__link ? (
+                        {item.post__link ? (
                           <a
                             href={item.post__link}
                             className="btn btn-dark btn-xsmall"
+                            target="_blank"
                           >
                             Post
                           </a>
@@ -72,8 +77,12 @@ const FeaturedSection: React.FunctionComponent<{}> = (): React.ReactElement => {
             })}
           </div>
         </div>
-        <div className="space"></div>
+        <div className="space" />
+        <h4 className="uppercase p-2 text-gray-400 u-text-center">
+          More will be uploaded soon...
+        </h4>
         <div className="divider"></div>
+        <div className="space" />
       </div>
     </section>
   );
