@@ -28,7 +28,12 @@ const Landing: React.FunctionComponent<{}> = (): React.ReactElement => {
                 <b>Country:</b> Philippines
               </p>
               <div className="btn-group">
-                <button className="btn-light outline">Contact</button>
+                <a
+                  href="mailto:atienza.new@gmail.com"
+                  className="btn btn-light outline"
+                >
+                  Contact
+                </a>
               </div>
             </Fade>
           </div>
