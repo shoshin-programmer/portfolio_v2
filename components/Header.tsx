@@ -18,7 +18,7 @@ const Header: React.FunctionComponent<{}> = (): React.ReactElement => {
       <Fade top cascade>
         <div className="header-brand">
           <div className="nav-item no-hover m-1">
-            <a>
+            <a href="#">
               <h6 className="title">mark.the.dev</h6>
             </a>
           </div>
