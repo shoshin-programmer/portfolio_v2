@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Link from "next/link";
 import project_list from "../data/project_list";
 import Fade from "react-reveal/Fade";
+import FooterSection from "../sections/FooterSection";
 
 const Projects: React.FunctionComponent<{}> = (): React.ReactElement => {
   var startfade = 200;
@@ -30,6 +31,7 @@ const Projects: React.FunctionComponent<{}> = (): React.ReactElement => {
         </div>
         <div className="transition "></div>
       </div>
+      <FooterSection />
     </>
   );
 };
