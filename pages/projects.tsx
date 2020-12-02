@@ -2,8 +2,10 @@ import Head from "next/head";
 import Header from "../components/Header";
 import Link from "next/link";
 import project_list from "../data/project_list";
+import Fade from "react-reveal/Fade";
 
 const Projects: React.FunctionComponent<{}> = (): React.ReactElement => {
+  var startfade = 200;
   return (
     <>
       <Head>
@@ -20,7 +22,9 @@ const Projects: React.FunctionComponent<{}> = (): React.ReactElement => {
           <div className="content u-text-left p-3">
             <h1 className="headline-5 mt-5 text-gray-400">THE LIBRARY</h1>
             {project_list.map((item, idx) => (
-              <Tile key={idx} item={item} />
+              <Fade delay={startfade + idx * 300} bottom>
+                <Tile key={idx} item={item} />
+              </Fade>
             ))}
           </div>
         </div>
