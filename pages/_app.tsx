@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
         />
         <meta charSet="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge;" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge;" />
         <link
           href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700"
           rel="stylesheet"

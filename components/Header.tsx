@@ -76,7 +76,7 @@ const Header: React.FunctionComponent<{}> = (): React.ReactElement => {
           </Slide>
           <Slide top cascade delay={1400}>
             <div className="nav-item">
-              <a href="#project-section">Projects</a>
+              <a href="#project-section">Featured</a>
             </div>
           </Slide>
           <Slide top cascade delay={1600}>
