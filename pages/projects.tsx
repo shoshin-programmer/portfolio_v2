@@ -15,16 +15,14 @@ const Projects: React.FunctionComponent<{}> = (): React.ReactElement => {
       <Header />
       <div
         id="project-section"
-        className={`hero parallax-img ${
-          project_list.length < 4 ? "fullscreen" : ""
-        }`}
+        className="hero parallax-img full-height"
       >
         <div className="hero-body">
           <div className="content u-text-left p-3">
             <h1 className="headline-5 mt-5 text-gray-400">THE LIBRARY</h1>
             {project_list.map((item, idx) => (
-              <Fade delay={startfade + idx * 300} bottom>
-                <Tile key={idx} item={item} />
+              <Fade key={idx} delay={startfade + idx * 300} bottom>
+                <Tile item={item} />
               </Fade>
             ))}
           </div>
@@ -52,7 +50,7 @@ function Tile({ item }) {
             <div className="btn-group">
               {item.links.map((link, idx) => (
                 <Link href={link.url} key={idx}>
-                  <a className="btn btn-dark btn-small uppercase">
+                  <a target="_blank" className="btn btn-dark btn-small uppercase">
                     {link.name}
                   </a>
                 </Link>

@@ -1,4 +1,5 @@
 import featured from "./FeaturedProjects";
+import Link from "next/link";
 import Fade from "react-reveal/Fade";
 
 const FeaturedSection: React.FunctionComponent<{}> = (): React.ReactElement => {
@@ -10,7 +11,9 @@ const FeaturedSection: React.FunctionComponent<{}> = (): React.ReactElement => {
             <div className="u-text-center content">
               <h2 className="uppercase p-2 text-gray-600">Projects</h2>
               <p className="text-secondary white">
-                Some projects that I have worked on.
+                Most of my projects are owned by their respective companies, now
+                I am spending some time to create personal projects that the
+                public can use.
               </p>
             </div>
             <div className="row">
@@ -81,9 +84,13 @@ const FeaturedSection: React.FunctionComponent<{}> = (): React.ReactElement => {
               </div>
             </div>
             <div className="space" />
-            <h4 className="uppercase p-2 text-gray-400 u-text-center">
-              More will be uploaded soon...
-            </h4>
+            <div className="u-text-center">
+              <Link href="/projects">
+                <button className="btn-dark outline white">
+                  CHECK THE LIBRARY
+                </button>
+              </Link>
+            </div>
             <div className="divider"></div>
             <div className="space" />
           </div>

@@ -15,6 +15,22 @@ const project_list = [
       },
     ],
   },
+  {
+    title: "Former Personal Portfolio",
+    subtitle:
+      "My nth iteration of my portfolio using NextJS for the first time.",
+    year: "2020",
+    links: [
+      {
+        name: "Github",
+        url: "https://github.com/shoshin-programmer/mark_atienza",
+      },
+      {
+        name: "Page",
+        url: "https://2020-portfolio-v1.vercel.app",
+      },
+    ],
+  },
 ];
 
 export default project_list;
