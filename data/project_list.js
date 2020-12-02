@@ -1,57 +1,20 @@
 const project_list = [
   {
-    title: "Test",
+    title: "Commissions Portfolio",
     subtitle:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Portfolio for commissions to show featured art commissions. This is created using NextJS and uploaded to Vercel for free.",
     year: "2020",
     links: [
       {
         name: "Github",
-        url: "/",
+        url: "https://github.com/shoshin-programmer/inks_and_watercolors",
       },
       {
         name: "Page",
-        url: "/",
+        url: "http://inks-and-watercolor.vercel.app/",
       },
     ],
   },
-  {
-    title: "Test",
-    subtitle:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    year: "2020",
-    links: [
-      {
-        name: "Github",
-        url: "/",
-      },
-    ],
-  },
-  {
-    title: "Test",
-    subtitle:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    year: "2020",
-    links: [
-      {
-        name: "Github",
-        url: "/",
-      },
-    ],
-  },
-  {
-    title: "Test",
-    subtitle:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    year: "2020",
-    links: [
-      {
-        name: "Github",
-        url: "/",
-      },
-    ],
-  },
-
 ];
 
 export default project_list;
