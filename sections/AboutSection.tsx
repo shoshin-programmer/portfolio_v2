@@ -3,15 +3,19 @@ import Fade from "react-reveal/Fade";
 const AboutSection: React.FunctionComponent<{}> = (): React.ReactElement => {
   return (
     <section className="py-8" id="about-section">
-      <Fade bottom cascade duration={2000}>
-        <div className="content u-text-center text-gray-200 p-2">
+      <div className="content u-text-center text-gray-200 p-2">
+        <Fade bottom delay={500}>
           <div className="avatar avatar--xlarge bg-gray-200">
             <img src="/myAvatar.svg" alt="avatar" />
           </div>
+        </Fade>
+        <Fade bottom delay={700}>
           <h3 className="uppercase font-bold m-5">
             MY NAME IS
             <span className="text-primary"> Mark Atienza</span>
           </h3>
+        </Fade>
+        <Fade bottom delay={900}>
           <p className="mb-3">
             Hello! I'm Mark Atienza, a web developer based in the Philippines. I
             create <b className="white">user-centered</b> websites, applications
@@ -23,8 +27,10 @@ const AboutSection: React.FunctionComponent<{}> = (): React.ReactElement => {
             <span className="mb-5" />
             Here are a few technologies I've been working with recently:
           </p>
-          <div className="content">
-            <div className="row">
+        </Fade>
+        <div className="content">
+          <div className="row">
+            <Fade bottom delay={900}>
               <div className="col">
                 <h6 className="lead uppercase mb-1 font-bold text-gray-500 p-1">
                   BACKEND
@@ -57,10 +63,10 @@ const AboutSection: React.FunctionComponent<{}> = (): React.ReactElement => {
                 <div className="uppercase font-bold text-gray-200">AWS EC2</div>
                 <div className="uppercase font-bold text-gray-200">Docker</div>
               </div>
-            </div>
+            </Fade>
           </div>
         </div>
-      </Fade>
+      </div>
     </section>
   );
 };
