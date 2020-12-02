@@ -1,6 +1,7 @@
 import { useState, MouseEvent } from "react";
 import Fade from "react-reveal/Fade";
 import Slide from "react-reveal/Slide";
+import Link from "next/link";
 
 const Header: React.FunctionComponent<{}> = (): React.ReactElement => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
@@ -33,8 +34,16 @@ const Header: React.FunctionComponent<{}> = (): React.ReactElement => {
         className={`header-nav ${menuOpen ? "active" : ""}`}
         id="header-menu"
       >
-        <div className="nav-left">
-          <Fade top cascade delay={500}>
+        <Fade top cascade delay={500}>
+          <div className="nav-left">
+            <div className="nav-item">
+              <a onClick={handleSoon} target="_blank">
+                Blog
+              </a>
+            </div>
+            <div className="nav-item">
+              <Link href="/projects">Projects</Link>
+            </div>
             <div className="nav-item text-center">
               <a href="https://github.com/shoshin-programmer" target="_blank">
                 <span className="icon">
@@ -45,8 +54,6 @@ const Header: React.FunctionComponent<{}> = (): React.ReactElement => {
                 </span>
               </a>
             </div>
-          </Fade>
-          <Fade top cascade delay={800}>
             <div className="nav-item text-center">
               <a
                 href="https://www.linkedin.com/in/arvin-mark-atienza-687851143/"
@@ -60,41 +67,28 @@ const Header: React.FunctionComponent<{}> = (): React.ReactElement => {
                 </span>
               </a>
             </div>
-          </Fade>
-        </div>
+          </div>
+        </Fade>
 
-        <div className="nav-right">
-          <Slide top cascade delay={1000}>
+        <Slide top cascade delay={700}>
+          <div className="nav-right">
             <div className="nav-item">
-              <a href="/">Home</a>
+              <Link href="/">Home</Link>
             </div>
-          </Slide>
-          <Slide top cascade delay={1200}>
             <div className="nav-item">
-              <a href="#about-section">About</a>
+              <Link href="/#about-section">About</Link>
             </div>
-          </Slide>
-          <Slide top cascade delay={1400}>
             <div className="nav-item">
-              <a href="#project-section">Featured</a>
+              <Link href="/#project-section">Featured</Link>
             </div>
-          </Slide>
-          <Slide top cascade delay={1600}>
             <div className="nav-item">
-              <a href="#work-section">Work</a>
+              <Link href="/#work-section">Work</Link>
             </div>
-          </Slide>
-          <Slide top cascade delay={1800}>
-            <div className="nav-item">
-              <a onClick={handleSoon} target="_blank">
-                Blog
-              </a>
-            </div>
-          </Slide>
-          {/* <div className="nav-item">
+            {/* <div className="nav-item">
             <button className="btn outline btn-light btn-small">RESUME</button>
           </div> */}
-        </div>
+          </div>
+        </Slide>
       </div>
     </div>
   );

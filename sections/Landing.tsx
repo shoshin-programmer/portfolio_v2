@@ -1,7 +1,7 @@
 import Fade from "react-reveal/Fade";
 
 const Landing: React.FunctionComponent<{}> = (): React.ReactElement => {
-  const start = 2200;
+  const start = 1200;
   return (
     <section id="landing">
       <div id="landing-img" className="hero fullscreen hero-img parallax-img">
