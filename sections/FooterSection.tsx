@@ -23,8 +23,12 @@ const FooterSection: React.FunctionComponent<{}> = (): React.ReactElement => {
         <div className="content">
           <div className="divider"></div>
           <div className="row">
-            <div className="col-2 offset-3 ignore-screen">
-              <a href="https://www.linkedin.com/in/arvin-mark-atienza-687851143/">
+            <div className="col-2 offset-2 ignore-screen">
+              <a
+                href="https://www.linkedin.com/in/arvin-mark-atienza-687851143/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <span className="icon">
                   <i
                     className="fab fa-wrapper fa-linkedin"
@@ -34,10 +38,28 @@ const FooterSection: React.FunctionComponent<{}> = (): React.ReactElement => {
               </a>
             </div>
             <div className="col-2 ignore-screen">
-              <a href="https://github.com/shoshin-programmer">
+              <a
+                href="https://github.com/shoshin-programmer"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <span className="icon">
                   <i
                     className="fab fa-wrapper fa-github"
+                    aria-hidden="true"
+                  ></i>
+                </span>
+              </a>
+            </div>
+            <div className="col-2 ignore-screen">
+              <a
+                href="https://www.instagram.com/mark.the.dev/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className="icon">
+                  <i
+                    className="fab fa-wrapper fa-instagram"
                     aria-hidden="true"
                   ></i>
                 </span>

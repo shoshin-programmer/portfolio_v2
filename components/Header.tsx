@@ -67,6 +67,16 @@ const Header: React.FunctionComponent<{}> = (): React.ReactElement => {
                 </span>
               </a>
             </div>
+            <div className="nav-item text-center">
+              <a href="https://www.instagram.com/mark.the.dev/" target="_blank">
+                <span className="icon">
+                  <i
+                    className="fab fa-wrapper fa-instagram"
+                    aria-hidden="true"
+                  ></i>
+                </span>
+              </a>
+            </div>
           </div>
         </Fade>
 
