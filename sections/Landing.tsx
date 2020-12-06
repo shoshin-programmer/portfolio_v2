@@ -14,11 +14,9 @@ const Landing: React.FunctionComponent<{}> = (): React.ReactElement => {
               <div className="row">
                 <div className="col-8">
                   <h5 className="text-gray-300 sub-title font-alt font-normal">
-                    I am{" "}
-                    <b className="text-primary">fullstack web developer </b>
-                    that creates <b className="text-primary">engaging </b>and
-                    <b className="text-primary"> user-centric </b>
-                    web applications.
+                    I am a full stack developer having business experience of
+                    transforming requirements to{" "}
+                    <b className="text-primary">user-centered applications.</b>
                   </h5>
                 </div>
               </div>
