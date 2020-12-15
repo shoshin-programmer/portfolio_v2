@@ -28,7 +28,7 @@ const Landing: React.FunctionComponent<{}> = (): React.ReactElement => {
               <div className="btn-group">
                 <a
                   href="mailto:atienza.new@gmail.com"
-                  className="btn btn-light outline"
+                  className="btn btn-primary btn-small"
                 >
                   Contact
                 </a>
