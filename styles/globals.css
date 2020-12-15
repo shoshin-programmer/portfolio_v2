@@ -83,6 +83,14 @@ a {
   color: inherit;
   text-decoration: none;
 }
+.blog-card:hover {
+  cursor: pointer;
+}
+.card-img-obj {
+    -webkit-filter: blur(2px) brightness(50%); /* Safari 6.0 - 9.0 */
+    filter: blur(2px) brightness(50%);
+    
+}
 
 * {
   box-sizing: border-box;

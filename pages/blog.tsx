@@ -28,22 +28,26 @@ const Projects: React.FunctionComponent<{}> = (): React.ReactElement => {
           </div>
           <div className="blog-list">
             <div className="ml-5 mr-5 p-2">
-              {blog_data.map(item => {
+              {blog_data.map((item) => {
                 return (
                   <div className="row" key={item.id}>
-                    <div className={`col-${item.col_length}`}>
-                      <div className="card">
-                        <div className="card-container">
-                          <div className="card-image">
-                            <img src={item.img_url} />
-                          </div>
-                          <div className="title-container">
-                            <p className="title">{item.title}</p>
-                            <span className="subtitle">{item.subtitle}</span>
+                    <Link href="/blog">
+                        <div className={`col-${item.col_length} blog-card`}>
+                          <div className="card">
+                            <div className="card-container">
+                              <div className="card-image">
+                                <img src={item.img_url} className="card-img-obj" />
+                              </div>
+                              <div className="title-container">
+                                <p className="title">{item.title}</p>
+                                <span className="subtitle">
+                                  {item.subtitle}
+                                </span>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
+                    </Link>
                   </div>
                 );
               })}
