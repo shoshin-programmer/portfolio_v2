@@ -12,8 +12,9 @@ const WorkSection: React.FunctionComponent<{}> = (): React.ReactElement => {
             <div className="col-6">
               <h6 className="title text-left white">ZenRooms @ 2020</h6>
               <p>
-                Working on internal system for Finance team automation of
-                processes.
+                Automations of invoices (PDF, and Excel Files) , sending emails,
+                and calculations from several sources of data into a web
+                interface with asynchronous processing.
               </p>
 
               <div className="row"></div>
@@ -33,9 +34,8 @@ const WorkSection: React.FunctionComponent<{}> = (): React.ReactElement => {
             <div className="col-6">
               <h6 className="title text-left white">RingCentral @ 2019</h6>
               <p>
-                Internal HR system using Python, Django, React. From designing
-                to deploying internal tool. Also worked with Microsoft PowerApps
-                and Sharepoint for specific purposes.
+                Sole developer transforming abstract ideas from the HR team into
+                a process of automation for New Employee Onboarding Process.
               </p>
 
               <div className="row"></div>
