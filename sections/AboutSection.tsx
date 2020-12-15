@@ -6,7 +6,7 @@ const AboutSection: React.FunctionComponent<{}> = (): React.ReactElement => {
       <div className="content u-text-center text-gray-200 p-2">
         <Fade bottom delay={500}>
           <div className="avatar avatar--xlarge bg-gray-200">
-            <img src="/myAvatar.svg" alt="avatar" />
+            <img src="/profile.jpg" alt="avatar" />
           </div>
         </Fade>
         <Fade bottom delay={700}>
