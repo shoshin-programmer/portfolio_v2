@@ -13,6 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge;" />
+        <meta property="og:image" content="/web.png" key="ogimage" />
         <link
           href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700"
           rel="stylesheet"
