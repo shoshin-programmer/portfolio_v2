@@ -21,6 +21,30 @@ export default function Home() {
     <div>
       <Head>
         <title>Mark The Dev</title>
+        <meta
+          prefix="og: http://ogp.me/ns#"
+          property="og:type"
+          content="Portfolio for Mark the Dev."
+        />
+
+        <meta
+          prefix="og: http://ogp.me/ns#"
+          property="og:title"
+          content="Mark The Dev - The Portfolio"
+        />
+
+        <meta
+          prefix="og: http://ogp.me/ns#"
+          property="og:description"
+          content="Portfolio for sample projects and more details."
+        />
+
+        <meta
+          prefix="og: http://ogp.me/ns#"
+          property="og:image"
+          content="/web.png"
+        />
+
       </Head>
       {loading ? (
         <FullLoader />
