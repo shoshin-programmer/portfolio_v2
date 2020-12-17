@@ -18,6 +18,10 @@ export default class MyDocument extends Document {
           <meta property="og:title" content="Mark The Dev - The Portfolio" />
           <meta property="og:url" content="https://www.mark-atienza.com/" />
           <meta property="og:image" content="/web.png" />
+          <meta property="og:image:type" content="image/png" />
+          <meta property="og:image:width" content="400" />
+          <meta property="og:image:height" content="300" />
+
           <meta
             property="og:description"
             content="Portfolio for sample projects and more details."
