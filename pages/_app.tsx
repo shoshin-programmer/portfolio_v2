@@ -13,7 +13,29 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge;" />
-        <meta property="og:image" content="/web.png" key="ogimage" />
+        <meta
+          prefix="og: http://ogp.me/ns#"
+          property="og:type"
+          content="Portfolio for Mark the Dev."
+        />
+
+        <meta
+          prefix="og: http://ogp.me/ns#"
+          property="og:title"
+          content="Mark The Dev - The Portfolio"
+        />
+
+        <meta
+          prefix="og: http://ogp.me/ns#"
+          property="og:description"
+          content="Portfolio for sample projects and more details."
+        />
+
+        <meta
+          prefix="og: http://ogp.me/ns#"
+          property="og:image"
+          content="/web.png"
+        />
         <link
           href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700"
           rel="stylesheet"
