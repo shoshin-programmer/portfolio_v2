@@ -7,26 +7,6 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <title>Mark The Dev</title>
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
-          />
-          <meta charSet="UTF-8" />
-          <meta httpEquiv="X-UA-Compatible" content="IE=edge;" />
-          <meta property="og:type" content="Portfolio for Mark the Dev." />
-          <meta property="og:title" content="Mark The Dev - The Portfolio" />
-          <meta property="og:url" content="https://www.mark-atienza.com/" />
-          <meta property="og:image" content="/web.png" />
-          <meta property="og:image:type" content="image/png" />
-          <meta property="og:image:width" content="400" />
-          <meta property="og:image:height" content="300" />
-
-          <meta
-            property="og:description"
-            content="Portfolio for sample projects and more details."
-          />
-
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async

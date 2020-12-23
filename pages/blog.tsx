@@ -12,6 +12,24 @@ const Projects: React.FunctionComponent<{}> = (): React.ReactElement => {
     <>
       <Head>
         <title>Blog by Mark the Dev</title>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+        />
+        <meta charSet="UTF-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge;" />
+        <meta property="og:type" content="Portfolio for Mark the Dev." />
+        <meta property="og:title" content="Mark The Dev - The Portfolio" />
+        <meta property="og:url" content="https://www.mark-atienza.com/" />
+        <meta property="og:image" content="/web.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+
+        <meta
+          property="og:description"
+          content="Portfolio for sample projects and more details."
+        />
       </Head>
       <Header />
       <div id="blog-bg" className="hero parallax-img">
@@ -32,21 +50,22 @@ const Projects: React.FunctionComponent<{}> = (): React.ReactElement => {
                 return (
                   <div className="row" key={item.id}>
                     <Link href="/blog">
-                        <div className={`col-${item.col_length} blog-card`}>
-                          <div className="card">
-                            <div className="card-container">
-                              <div className="card-image">
-                                <img src={item.img_url} className="card-img-obj" />
-                              </div>
-                              <div className="title-container">
-                                <p className="title">{item.title}</p>
-                                <span className="subtitle">
-                                  {item.subtitle}
-                                </span>
-                              </div>
+                      <div className={`col-${item.col_length} blog-card`}>
+                        <div className="card">
+                          <div className="card-container">
+                            <div className="card-image">
+                              <img
+                                src={item.img_url}
+                                className="card-img-obj"
+                              />
+                            </div>
+                            <div className="title-container">
+                              <p className="title">{item.title}</p>
+                              <span className="subtitle">{item.subtitle}</span>
                             </div>
                           </div>
                         </div>
+                      </div>
                     </Link>
                   </div>
                 );
