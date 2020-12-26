@@ -1,12 +1,11 @@
 const featured = [
   {
-    title: "Commissions Portfolio",
+    title: "NextJS Fundamentals",
     subtitle: null,
-    img: "/inks.png",
+    img: "/.png",
     intro:
-      "Simple page for commissions portfolio made with NextJS and uploaded via Vercel.",
-    page__link: "http://inks-and-watercolor.vercel.app/",
-    github__link: "https://github.com/shoshin-programmer/inks_and_watercolors",
+      "This will be a sample and minor practice of mastering NextJS fundamentals.",
+    github__link: "https://github.com/shoshin-programmer/nextjs_fundamentals",
     post__link: null,
   },
 ];
