@@ -1,5 +1,16 @@
 const project_list = [
   {
+    title: "Next JS Fundamentals",
+    subtitle: "Next JS Fundamentals review.",
+    year: "2020",
+    links: [
+      {
+        name: "Github",
+        url: "https://github.com/shoshin-programmer/nextjs_fundamentals",
+      },
+    ],
+  },
+  {
     title: "Commissions Portfolio",
     subtitle:
       "Portfolio for commissions to show featured art commissions. This is created using NextJS and uploaded to Vercel for free.",
