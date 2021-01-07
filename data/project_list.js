@@ -1,5 +1,21 @@
 const project_list = [
   {
+    title: "Quiz App",
+    subtitle:
+      "Quiz App using Typescript, NextJS and SWR for fetching data from an external API.",
+    year: "2020",
+    links: [
+      {
+        name: "Github",
+        url: "https://github.com/shoshin-programmer/quiz_app/",
+      },
+      {
+        name: "Page",
+        url: "https://quiz-app-plum.vercel.app/",
+      },
+    ],
+  },
+  {
     title: "Next JS Fundamentals",
     subtitle: "Next JS Fundamentals review.",
     year: "2020",
