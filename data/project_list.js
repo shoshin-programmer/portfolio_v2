@@ -16,6 +16,17 @@ const project_list = [
     ],
   },
   {
+    title: "Finance Tool",
+    subtitle: "Finance tool which we developed when I worked with Zenrooms.",
+    year: "2020",
+    links: [
+      {
+        name: "Github",
+        url: "https://github.com/shoshin-programmer/kaizen/",
+      },
+    ],
+  },
+  {
     title: "Next JS Fundamentals",
     subtitle: "Next JS Fundamentals review.",
     year: "2020",
