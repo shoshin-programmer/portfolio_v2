@@ -1,10 +1,11 @@
-import { useState, MouseEvent } from "react";
+import { useEffect, useState, MouseEvent } from "react";
 import Fade from "react-reveal/Fade";
 import Slide from "react-reveal/Slide";
 import Link from "next/link";
 
 const Header: React.FunctionComponent<{}> = (): React.ReactElement => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const [scrollPosition, setScrollPosition] = useState<number>(0);
 
   const handleClick = (event: MouseEvent<HTMLDivElement>) => {
     setMenuOpen(!menuOpen);
@@ -13,9 +14,23 @@ const Header: React.FunctionComponent<{}> = (): React.ReactElement => {
   const handleSoon = (event: MouseEvent<HTMLAnchorElement>) => {
     alert("Coming Soon");
   };
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+  };
 
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
   return (
-    <div className="header header-dark header-fixed header-dark u-unselectable header-animated">
+    <div
+      className={`header header-fixed header-dark u-unselectable header-animated ${
+        scrollPosition <= 50 ? "header-clear p-2" : "p-1"
+      } `}
+    >
       <Fade top cascade>
         <div className="header-brand">
           <div className="nav-item no-hover m-1">
