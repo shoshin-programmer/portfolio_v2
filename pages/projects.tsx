@@ -1,27 +1,52 @@
+// LIBRARIES
 import Head from "next/head";
-import Header from "../components/Header";
-import Link from "next/link";
-import project_list from "../data/project_list";
+import useSWR from "swr";
 import Fade from "react-reveal/Fade";
+// COMPONENTS
 import FooterSection from "../sections/FooterSection";
+import Header from "../components/Header";
+import Tile from "../components/Tile";
+import Loader from "../components/Loader";
 
-const Projects: React.FunctionComponent<{}> = (): React.ReactElement => {
+// VARIABLES
+const fetcher = async (url: string) => {
+  const res = await fetch(url);
+  return res.json();
+};
+
+// TYPES / INTERFACE
+import { Project } from "../types/types";
+
+const Projects = () => {
+  const { data, error } = useSWR("/api/projects", fetcher);
   var startfade = 200;
+  if (error) return <Loader message={"Error"} />;
+  if (!data) return <Loader message={"Loading"} />;
   return (
     <>
       <Head>
-        <title>The Library</title>
+        <title>Project Library</title>
       </Head>
       <Header />
       <div id="project-section" className="hero parallax-img full-height">
         <div className="hero-body">
           <div className="content u-text-left p-3 content-sm">
-            <h1 className="headline-5 mt-5 text-gray-400">THE LIBRARY</h1>
-            {project_list.map((item, idx) => (
-              <Fade key={idx} delay={startfade + idx * 300} bottom>
-                <Tile item={item} />
-              </Fade>
-            ))}
+            {error ? (
+              <Loader message="Error" />
+            ) : !data ? (
+              <Loader message="Loading" />
+            ) : (
+              <>
+                <h1 className="headline-5 mt-5 text-gray-400">
+                  PROJECT LIBRARY
+                </h1>
+                {data.projects.map((project: Project, idx: number) => (
+                  <Fade key={idx} delay={startfade + idx * 300} bottom>
+                    <Tile data={project} />
+                  </Fade>
+                ))}
+              </>
+            )}
           </div>
         </div>
         <div className="transition "></div>
@@ -32,48 +57,3 @@ const Projects: React.FunctionComponent<{}> = (): React.ReactElement => {
 };
 
 export default Projects;
-
-function Tile({ item }) {
-  return (
-    <div className="row">
-      <div className="col-md-12 bg-black mt-2">
-        <div className="tile white p-2 library-tiles">
-          <div className="tile__container u-text-ellipsis">
-            <p className="tile__title m-0 u-text-ellipsis">{item.title}</p>
-            <p className="tile__subtitle m-0 u-text-ellipsis">
-              {item.subtitle}
-            </p>
-            <span className="info">{item.year}</span>
-          </div>
-          <div className="tile__buttons">
-            {item.links.map((link, idx) => (
-              <Link href={link.url} key={idx}>
-                <a
-                  target="_blank"
-                  className="btn btn-dark btn-xsmall uppercase"
-                >
-                  {link.name == "Github" ? (
-                    <span className="icon">
-                      <i
-                        className="fab fa-wrapper fa-github"
-                        aria-hidden="true"
-                      ></i>
-                    </span>
-                  ) : (
-                    <span className="icon">
-                      <i
-                        className="fas fa-wrapper fa-external-link-alt"
-                        aria-hidden="true"
-                      ></i>
-                    </span>
-
-                  )}
-                </a>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}

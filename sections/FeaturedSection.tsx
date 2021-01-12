@@ -87,7 +87,7 @@ const FeaturedSection: React.FunctionComponent<{}> = (): React.ReactElement => {
             <div className="u-text-center">
               <div className="btn-group">
                 <Link href="/projects">
-                  <a className="btn btn-primary btn-small">CHECK THE LIBRARY</a>
+                  <a className="btn btn-primary btn-small">PROJECT LIBRARY</a>
                 </Link>
               </div>
             </div>
