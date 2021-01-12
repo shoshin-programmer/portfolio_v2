@@ -20,8 +20,6 @@ import { Project } from "../types/types";
 const Projects = () => {
   const { data, error } = useSWR("/api/projects", fetcher);
   var startfade = 200;
-  if (error) return <Loader message={"Error"} />;
-  if (!data) return <Loader message={"Loading"} />;
   return (
     <>
       <Head>
