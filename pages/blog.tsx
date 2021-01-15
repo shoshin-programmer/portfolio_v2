@@ -44,7 +44,7 @@ const Projects: React.FunctionComponent<{}> = (): React.ReactElement => {
             <div className="row">
               {blog_data.map((item) => {
                 return (
-                  <Link href="/blog">
+                  <Link href={`/blog/${item.id}`}>
                     <div className={`col-lg-${item.col_length} blog-card`}>
                       <div className="card bg-black text-light">
                         <div className="card-container">

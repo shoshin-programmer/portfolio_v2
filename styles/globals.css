@@ -31,6 +31,9 @@ body {
   background: linear-gradient(rgba(4, 19, 46, 0.9), rgba(4, 19, 46, 0.9)),
     url("https://source.unsplash.com/mw3jM8t4BO8/1920x1480");
 }
+.blog-post {
+  background: linear-gradient(#182741, #05142D);
+}
 .blog-list {
   background: #030E21;
 }

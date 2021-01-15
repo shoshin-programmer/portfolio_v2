@@ -60,9 +60,7 @@ const Header: React.FunctionComponent<{}> = (): React.ReactElement => {
         <Fade top cascade delay={500}>
           <div className="nav-left">
             <div className="nav-item">
-              <a onClick={handleSoon} target="_blank">
-                Blog
-              </a>
+              <Link href="/blog">Blog</Link>
             </div>
             <div className="nav-item">
               <Link href="/projects">Projects</Link>
