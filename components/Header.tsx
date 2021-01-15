@@ -6,17 +6,25 @@ import Link from "next/link";
 const Header: React.FunctionComponent<{}> = (): React.ReactElement => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const [scrollPosition, setScrollPosition] = useState<number>(0);
+  const [darken, setDarken] = useState<boolean>(true);
 
   const handleClick = (event: MouseEvent<HTMLDivElement>) => {
     setMenuOpen(!menuOpen);
+    setDarken(menuOpen);
   };
 
   const handleSoon = (event: MouseEvent<HTMLAnchorElement>) => {
     alert("Coming Soon");
   };
+
   const handleScroll = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);
+    if (scrollPosition <= 50) {
+      setDarken(true);
+    } else {
+      setDarken(false);
+    }
   };
 
   useEffect(() => {
@@ -28,7 +36,7 @@ const Header: React.FunctionComponent<{}> = (): React.ReactElement => {
   return (
     <div
       className={`header header-fixed header-dark u-unselectable header-animated ${
-        scrollPosition <= 50 ? "header-clear p-2" : "p-1"
+        darken ? "header-clear p-2" : "p-1"
       } `}
     >
       <Fade top cascade>
