@@ -36,38 +36,46 @@ const Projects: React.FunctionComponent<{}> = (): React.ReactElement => {
         <div className="full-height w-100">
           <div className="hero-body u-flex u-flex-column u-justify-center fullscreen">
             <div>
-              <samp className="white headline-4"> THE BLOG</samp>
-            </div>
-            <div>
-              <code style={{ fontSize: "1.5em" }} className="white bg-black">
-                by mark the dev
-              </code>
+              <h1 className="headline-3 white">BLOG</h1>
+              <h4 className="white bg-black p-1 u-text-center">mark the dev</h4>
             </div>
           </div>
           <div className="blog-list">
-            <div className="ml-5 mr-5 p-2">
+            <div className="row">
               {blog_data.map((item) => {
                 return (
-                  <div className="row" key={item.id}>
-                    <Link href="/blog">
-                      <div className={`col-${item.col_length} blog-card`}>
-                        <div className="card">
-                          <div className="card-container">
-                            <div className="card-image">
-                              <img
-                                src={item.img_url}
-                                className="card-img-obj"
-                              />
-                            </div>
-                            <div className="title-container">
-                              <p className="title">{item.title}</p>
-                              <span className="subtitle">{item.subtitle}</span>
+                  <Link href="/blog">
+                    <div className={`col-lg-${item.col_length} blog-card`}>
+                      <div className="card bg-black text-light">
+                        <div className="card-container">
+                          <div
+                            className="card-image"
+                            style={{
+                              backgroundImage: `url(${item.img_url})`,
+                            }}
+                          ></div>
+                        </div>
+                        <div className="mobile-title bg-black">
+                          <div className="content text-light">
+                            <div className="tile">
+                              <div className="tile__container">
+                                <p className="tile__title">{item.title}</p>
+                                <small className="tile__subtitle tag">
+                                  Tag
+                                </small>
+                              </div>
                             </div>
                           </div>
                         </div>
+                        <div className="card-body content">
+                          <p>{item.subtitle}</p>
+                        </div>
+                        <div className="card-footer content">
+                          {item.read_length}
+                        </div>
                       </div>
-                    </Link>
-                  </div>
+                    </div>
+                  </Link>
                 );
               })}
             </div>
