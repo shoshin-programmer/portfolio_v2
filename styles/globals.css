@@ -34,6 +34,10 @@ body {
 .blog-post {
   background: linear-gradient(#182741, #05142D);
 }
+.blog-img {
+  width: 100%;
+  height: auto;
+}
 .blog-list {
   background: #030E21;
 }

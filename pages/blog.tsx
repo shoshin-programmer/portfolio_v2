@@ -59,10 +59,14 @@ const Projects: React.FunctionComponent<{}> = (): React.ReactElement => {
                           <div className="content text-light">
                             <div className="tile">
                               <div className="tile__container">
-                                <p className="tile__title">{item.title}</p>
-                                <small className="tile__subtitle tag">
-                                  Tag
-                                </small>
+                                <p className="tile__title">
+                                  {item.title}
+                                </p>
+                                  {item.tags.map((tag) => (
+                                    <small className="tile__subtitle tag ml-1">
+                                      {tag}
+                                    </small>
+                                  ))}
                               </div>
                             </div>
                           </div>
@@ -70,7 +74,7 @@ const Projects: React.FunctionComponent<{}> = (): React.ReactElement => {
                         <div className="card-body content">
                           <p>{item.subtitle}</p>
                         </div>
-                        <div className="card-footer content">
+                        <div className="card-footer content u-text-right">
                           {item.read_length}
                         </div>
                       </div>

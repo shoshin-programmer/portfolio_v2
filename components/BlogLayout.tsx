@@ -7,6 +7,7 @@ const BlogLayout: React.FC = ({ children }) => {
     <>
       <Header />
       <div className="bg-light">{children}</div>
+      <hr />
       <FooterSection />
     </>
   );

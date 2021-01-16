@@ -14,8 +14,7 @@ interface Post {
   content: [];
 }
 interface Content {
-  img: string;
-  text: string;
+  content: any;
 }
 
 const BlogPost: React.FC<Post> = () => {
@@ -36,7 +35,7 @@ const BlogPost: React.FC<Post> = () => {
                   <>Error</>
                 ) : (
                   <div className="mt-5 text-light">
-                    <h4 className="headline-4">{data.title}</h4>
+                    <h1 className="headline-4">{data.title}</h1>
                     {data.tags.map((tag: string, idx: number) => (
                       <h4
                         className="text-light bg-black p-1 u-text-center tag mr-1"
@@ -46,21 +45,7 @@ const BlogPost: React.FC<Post> = () => {
                       </h4>
                     ))}
                     <div className="text-light u-flex u-flex-column">
-                      {data.content.map((data: Content, idx: number) => (
-                        <div key={idx + 100}>
-                          {data.img ? (
-                            <>
-                              <img
-                                src={data.img}
-                                className={`${styles.blog_content_img} u-center`}
-                              />
-                              <br />
-                            </>
-                          ) : (
-                            <p>{data.text}</p>
-                          )}
-                        </div>
-                      ))}
+                      <div dangerouslySetInnerHTML={{ __html: data.content }} />
                     </div>
                   </div>
                 )}
