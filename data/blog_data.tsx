@@ -5,7 +5,7 @@ const blog_data = [
     subtitle:
       "First post on the series on why use React instead. First off, components.",
     img_url: "https://source.unsplash.com/u2Ru4QBXA5Q/1200x900/",
-    col_length: 8,
+    col_length: 4,
     tags: ["01", "NextJS", "TypeScript", "React"],
     read_length: "2 min. read.",
     content: `

@@ -34,13 +34,34 @@ const Projects: React.FunctionComponent<{}> = (): React.ReactElement => {
       <Header />
       <div id="blog-bg" className="hero parallax-img">
         <div className="full-height w-100">
-          <div className="hero-body u-flex u-flex-column u-justify-center fullscreen">
-            <div>
-              <h1 className="headline-3 white">BLOG</h1>
-              <h4 className="white bg-black p-1 u-text-center">mark the dev</h4>
-            </div>
+          <div
+            className="hero-body u-flex u-flex-column u-justify-center"
+            style={{ minHeight: "70vh" }}
+          >
+            <div className="space xlarge" />
+            <h1 className="headline-3 white">BLOG</h1>
+            <h4 className="white bg-black p-1 u-text-center">mark the dev</h4>
           </div>
-          <div className="blog-list">
+          <div className="blog-list full-height p-3">
+            <div className="row ignore-screen level">
+              <div className="col-6 level-item form-group">
+                <input
+                  className="bg-clear white outline"
+                  placeholder="Search"
+                />
+              </div>
+              <div className="col-2 mr-auto">
+                <div className="input-control">
+                  <select
+                    className="select white"
+                    placeholder="Categories"
+                  >
+                    <option value="1">All</option>
+                    <option value="2">Web-Development</option>
+                  </select>
+                </div>
+              </div>
+            </div>
             <div className="row">
               {blog_data.map((item) => {
                 return (
@@ -59,14 +80,12 @@ const Projects: React.FunctionComponent<{}> = (): React.ReactElement => {
                           <div className="content text-light">
                             <div className="tile">
                               <div className="tile__container">
-                                <p className="tile__title">
-                                  {item.title}
-                                </p>
-                                  {item.tags.map((tag) => (
-                                    <small className="tile__subtitle tag ml-1">
-                                      {tag}
-                                    </small>
-                                  ))}
+                                <p className="tile__title">{item.title}</p>
+                                {item.tags.map((tag) => (
+                                  <small className="tile__subtitle tag ml-1">
+                                    {tag}
+                                  </small>
+                                ))}
                               </div>
                             </div>
                           </div>

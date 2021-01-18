@@ -19,6 +19,11 @@ export default function Home() {
   }, []);
   return (
     <div>
+      <Head>
+        <title>Portfolio by Mark the Dev</title>
+        <meta property="og:type" content="Portfolio for Mark the Dev." />
+        <meta property="og:title" content="Mark The Dev - The Portfolio" />
+      </Head>
       {loading ? (
         <FullLoader />
       ) : (
